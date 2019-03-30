@@ -1,9 +1,9 @@
 import React from 'react';
 import PricePerNight from './PricePerNight';
 import Dates from './Dates';
-import Guests from './Guests'
+import Guests from './Guests';
 
-// import Calendar from 'react-calendar/dist/entry.nostyle';
+import Calendar from 'react-calendar/dist/entry.nostyle';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,8 +24,9 @@ class App extends React.Component {
         <div>
           <Guests />
         </div>
+        <Calendar />
       </div>
-    )
+    );
   }
 }
 

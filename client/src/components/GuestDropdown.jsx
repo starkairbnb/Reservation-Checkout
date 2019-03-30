@@ -1,9 +1,8 @@
 // --------- Widget1.css ---------------
-.button {
-  border-radius: 4px;
-  background-color: LightCyan;
-}
-
+// .button {
+//   border-radius: 4px;
+//   background-color: LightCyan;
+// }
 
 import React from 'react';
 
@@ -30,7 +29,7 @@ class GuestDropdown extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

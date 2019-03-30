@@ -1,14 +1,11 @@
 const db = require('./index.js');
 const mongoose = require('mongoose');
-const data = require('./data.json');
+const data = require('./dataGen.js');
 
-const seed = (data) => {
-  for (let blurb of data) {
-    const { description1, description2, imgUrl } = blurb
-    db.create({ description1, description2, imgUrl })
+const seed = dataArr => {
+  db.insertMany(dataArr)
     .then(() => mongoose.connection.close())
-    .catch((err) => console.error(err));
-  }
-}
+    .catch(err => console.log(err));
+};
 
 seed(data);
