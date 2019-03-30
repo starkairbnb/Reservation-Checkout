@@ -4,13 +4,13 @@ const morgan = require('morgan');
 const path = require('path');
 const router = require('./router.js');
 const app = express();
-const port = 3000;
+const port = 3003;
 
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
-app.use('/api', router);
+app.use('/api/reservations', router);
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`));
