@@ -11,7 +11,9 @@ import '../styles/availability_calendar_override.css';
 class Availability extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { focusedInput: START_DATE };
+    var date = new Date();
+    date.setDate(date.getDate() - 1);
+    this.state = { focusedInput: START_DATE, yesterday: date };
   }
 
   render() {
@@ -47,7 +49,10 @@ class Availability extends React.Component {
             }} // PropTypes.func.isRequired,
             noBorder={true}
             isOutsideRange={data => {
-              if (data._d < this.props.startDate) {
+              if (
+                data._d < this.props.startDate ||
+                data._d < this.state.yesterday
+              ) {
                 return true;
               } else {
                 return false;
