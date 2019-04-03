@@ -19,11 +19,16 @@ class App extends React.Component {
 
     this.state = {};
     this.handleDatesChange = this.handleDatesChange.bind(this);
+    this.clearDates = this.clearDates.bind(this);
   }
 
   handleDatesChange({ startDate, endDate }) {
     console.log(startDate, endDate);
     this.setState({ startDate, endDate });
+  }
+
+  clearDates() {
+    this.setState({ startDate: null, endDate: null });
   }
 
   render() {
@@ -33,6 +38,7 @@ class App extends React.Component {
           handleDatesChange={this.handleDatesChange}
           startDate={this.state.startDate}
           endDate={this.state.endDate}
+          clearDates={this.clearDates}
         />
         <div>a</div>
         <div>1</div>
