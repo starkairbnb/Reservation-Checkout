@@ -1,20 +1,24 @@
 import React from 'react';
 
 import 'react-dates/initialize';
-import { DateRangePicker, DayPickerRangeController } from 'react-dates';
+import { DayPickerRangeController } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
 import { START_DATE } from 'react-dates/constants.js';
 
+import '../styles/availability_calendar_override.css';
+
 class Availability extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { focusedInput: START_DATE };
+    var date = new Date();
+    date.setDate(date.getDate() - 1);
+    this.state = { focusedInput: START_DATE, yesterday: date };
   }
 
   render() {
     return (
-      <div>
+      <div className="availability-container">
         <div>Availability</div>
         <div>
           <span>min stay</span> <span>..last updated</span>{' '}
@@ -37,13 +41,23 @@ class Availability extends React.Component {
             onDatesChange={this.props.handleDatesChange} // PropTypes.func.isRequired,
             focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
             onFocusChange={focusedInput => {
-              console.log(focusedInput);
               if (focusedInput === null) {
                 this.setState({ focusedInput: START_DATE });
               } else {
                 this.setState({ focusedInput });
               }
             }} // PropTypes.func.isRequired,
+            noBorder={true}
+            isOutsideRange={data => {
+              if (
+                data._d < this.props.startDate ||
+                data._d < this.state.yesterday
+              ) {
+                return true;
+              } else {
+                return false;
+              }
+            }}
           />
         </div>
       </div>
