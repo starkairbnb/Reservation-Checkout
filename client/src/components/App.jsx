@@ -2,50 +2,63 @@ import React from 'react';
 import PricePerNight from './PricePerNight';
 import Dates from './Dates';
 import Guests from './Guests';
+import Availability from './Availability';
+import BookingDetails from './BookingDetails';
 
 // import Calendar from 'react-calendar/dist/entry.nostyle';
 
-import 'react-dates/initialize';
-import {
-  DateRangePicker,
-  SingleDatePicker,
-  DayPickerRangeController
-} from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
+// import 'react-dates/initialize';
+// import { DateRangePicker, DayPickerRangeController } from 'react-dates';
+// import 'react-dates/lib/css/_datepicker.css';
+
+// import { START_DATE } from 'react-dates/constants.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {};
+    this.handleDatesChange = this.handleDatesChange.bind(this);
+  }
+
+  handleDatesChange({ startDate, endDate }) {
+    console.log(startDate, endDate);
+    this.setState({ startDate, endDate });
   }
 
   render() {
     return (
       <div>
-        <div>
-          <PricePerNight />
-        </div>
-        <div>
-          <Dates />
-        </div>
-        <div>
-          <Guests />
-        </div>
-        <div>
-          <DateRangePicker
-            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-            startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-            endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-            onDatesChange={({ startDate, endDate }) => {
-              console.log(startDate, endDate);
-              this.setState({ startDate, endDate });
-            }} // PropTypes.func.isRequired,
-            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-          />
-        </div>
+        <Availability
+          handleDatesChange={this.handleDatesChange}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+        />
+        <div>a</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <BookingDetails
+          handleDatesChange={this.handleDatesChange}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+        />
       </div>
     );
   }
