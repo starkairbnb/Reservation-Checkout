@@ -1,17 +1,8 @@
 import React from 'react';
-import PricePerNight from './PricePerNight';
-import Dates from './Dates';
-import Guests from './Guests';
 import Availability from './Availability';
 import BookingDetails from './BookingDetails';
 
-// import Calendar from 'react-calendar/dist/entry.nostyle';
-
-// import 'react-dates/initialize';
-// import { DateRangePicker, DayPickerRangeController } from 'react-dates';
-// import 'react-dates/lib/css/_datepicker.css';
-
-// import { START_DATE } from 'react-dates/constants.js';
+import app_styles from '../styles/app_styles.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,7 +14,6 @@ class App extends React.Component {
   }
 
   handleDatesChange({ startDate, endDate }) {
-    console.log(startDate, endDate);
     this.setState({ startDate, endDate });
   }
 
@@ -33,38 +23,71 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Availability
-          handleDatesChange={this.handleDatesChange}
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          clearDates={this.clearDates}
-        />
-        <div>a</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <BookingDetails
-          handleDatesChange={this.handleDatesChange}
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-        />
+      <div className="main-body">
+        <div className="flex-container">
+          <div className="spacing-above">
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <Availability
+              handleDatesChange={this.handleDatesChange}
+              startDate={this.state.startDate}
+              endDate={this.state.endDate}
+              clearDates={this.clearDates}
+            />
+          </div>
+          <BookingDetails
+            handleDatesChange={this.handleDatesChange}
+            startDate={this.state.startDate}
+            endDate={this.state.endDate}
+          />
+        </div>
+        <div className="spacing-after">
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+          <div>1</div>
+        </div>
       </div>
     );
   }
