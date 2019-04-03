@@ -18,7 +18,16 @@ class Availability extends React.Component {
         <div>Availability</div>
         <div>
           <span>min stay</span> <span>..last updated</span>{' '}
-          <button onClick={this.props.clearDates}>Clear Dates</button>
+          <button
+            onClick={() => {
+              this.setState(
+                { focusedInput: START_DATE },
+                this.props.clearDates
+              );
+            }}
+          >
+            Clear Dates
+          </button>
         </div>
         <div>
           <DayPickerRangeController
