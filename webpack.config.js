@@ -3,7 +3,6 @@ const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
-  
   mode: 'development',
   entry: `${SRC_DIR}/index.jsx`,
   output: {
@@ -17,17 +16,16 @@ module.exports = {
         test: /\.jsx?/,
         exclude: /node_modules/,
         options: {
-          presets:  ['@babel/preset-env', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-react']
         }
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loaders: ['style-loader', 'css-loader'],
-      },
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
   resolve: {
     extensions: ['.js', '.jsx']
   }
-}
+};
