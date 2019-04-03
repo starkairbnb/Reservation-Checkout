@@ -27,7 +27,14 @@ class Availability extends React.Component {
             numberOfMonths={2}
             onDatesChange={this.props.handleDatesChange} // PropTypes.func.isRequired,
             focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+            onFocusChange={focusedInput => {
+              console.log(focusedInput);
+              if (focusedInput === null) {
+                this.setState({ focusedInput: START_DATE });
+              } else {
+                this.setState({ focusedInput });
+              }
+            }} // PropTypes.func.isRequired,
           />
         </div>
       </div>
