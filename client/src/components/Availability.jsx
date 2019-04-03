@@ -46,6 +46,13 @@ class Availability extends React.Component {
               }
             }} // PropTypes.func.isRequired,
             noBorder={true}
+            isOutsideRange={data => {
+              if (data._d < this.props.startDate) {
+                return true;
+              } else {
+                return false;
+              }
+            }}
           />
         </div>
       </div>
