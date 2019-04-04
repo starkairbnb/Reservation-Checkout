@@ -6,17 +6,20 @@ mongoose.connect('mongodb://localhost/reservation', { useNewUrlParser: true });
 const Schema = mongoose.Schema;
 
 const listingSchema = new Schema({
-  property_id: Number,
+  propertyId: Number,
   owner: String,
-  max_guests: Number,
-  nightly_rate: Number,
-  avg_rating: Number,
-  min_stay: Number,
-  service_fee_rate: Number,
-  recent_views: Number,
+  maxGuests: Number,
+  nightlyRate: Number,
+  avgRating: Number,
+  minStay: Number,
+  serviceFeeRate: Number,
+  recentViews: Number,
   popular: Boolean,
-  cleaning_fee: Number,
-  tax_rate: Number
+  cleaningFee: Number,
+  taxRate: Number,
+  reviewsCount: Number,
+  listing: Number,
+  daysSinceUpdated: Number
 });
 
 const Listings = mongoose.model('Listing', listingSchema);

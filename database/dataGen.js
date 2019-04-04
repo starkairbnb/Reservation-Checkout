@@ -10,17 +10,16 @@ const getRandomIntInclusive = (min, max) => {
 const listingGen = id => {
   let listing = {};
 
-  listing.property_id = id;
+  listing.propertyId = id;
   listing.owner = faker.name.firstName();
-  listing.max_guests = getRandomIntInclusive(1, 10);
-  listing.nightly_rate =
-    listing.max_guests * (getRandomIntInclusive(0, 20) + 25);
-  listing.avg_rating = getRandomIntInclusive(0, 2) / 2 + 4;
-  listing.min_stay = getRandomIntInclusive(1, 4);
-  listing.service_fee_rate = getRandomIntInclusive(15, 20) / 100;
-  listing.recent_views = getRandomIntInclusive(0, 600);
-  listing.reviews_count = getRandomIntInclusive(0, 25);
-  listing.days_since_updated = getRandomIntInclusive(0, 40);
+  listing.maxGuests = getRandomIntInclusive(1, 10);
+  listing.nightlyRate = listing.maxGuests * (getRandomIntInclusive(0, 20) + 25);
+  listing.avgRating = getRandomIntInclusive(0, 2) / 2 + 4;
+  listing.minStay = getRandomIntInclusive(1, 4);
+  listing.serviceFeeRate = getRandomIntInclusive(15, 20) / 100;
+  listing.recentViews = getRandomIntInclusive(0, 600);
+  listing.reviewsCount = getRandomIntInclusive(0, 25);
+  listing.daysSinceUpdated = getRandomIntInclusive(0, 40);
 
   if (Math.random() >= 0.5) {
     listing.popular = true;
@@ -29,15 +28,16 @@ const listingGen = id => {
   }
 
   if (Math.random() >= 0.5) {
-    listing.cleaning_fee = listing.max_guests * getRandomIntInclusive(10, 20);
+    let cleaningVar = listing.maxGuests * getRandomIntInclusive(10, 20);
+    listing.cleaningFee = cleaningVar;
   } else {
-    listing.cleaning_fee = null;
+    listing.cleaningFee = null;
   }
 
   if (Math.random() >= 0.5) {
-    listing.tax_rate = getRandomIntInclusive(5, 10) / 100;
+    listing.taxRate = getRandomIntInclusive(5, 10) / 100;
   } else {
-    listing.tax_rate = null;
+    listing.taxRate = null;
   }
 
   return listing;

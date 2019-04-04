@@ -20,9 +20,39 @@ class App extends React.Component {
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
     };
-    Axios.get('/api/reservations/' + getRandomIntInclusive(1, 100)).then(data =>
-      console.log(data.data)
-    );
+    Axios.get('/api/reservations/' + getRandomIntInclusive(1, 100))
+      .then(
+        ({
+          avgRating,
+          cleaningFee,
+          maxGuests,
+          minStay,
+          nightlyRate,
+          owner,
+          popular,
+          recentViews,
+          reviewsCount,
+          serviceFeeRate,
+          taxRate,
+          daysSinceUpdated
+        }) => {
+          this.setState({
+            avgRating,
+            cleaningFee,
+            maxGuests,
+            minStay,
+            nightlyRate,
+            owner,
+            popular,
+            recentViews,
+            reviewsCount,
+            serviceFeeRate,
+            taxRate,
+            daysSinceUpdated
+          });
+        }
+      )
+      .catch(err => console.log(err));
   }
 
   handleDatesChange({ startDate, endDate }) {
@@ -38,68 +68,34 @@ class App extends React.Component {
       <div className="main-body">
         <div className="flex-container">
           <div className="spacing-above">
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
+            <div style={{ height: '150vh' }} />
             <Availability
               handleDatesChange={this.handleDatesChange}
               startDate={this.state.startDate}
               endDate={this.state.endDate}
               clearDates={this.clearDates}
+              minStay={this.state.minStay}
+              daysSinceUpdated={this.state.daysSinceUpdated}
             />
           </div>
           <BookingDetails
             handleDatesChange={this.handleDatesChange}
             startDate={this.state.startDate}
             endDate={this.state.endDate}
+            avgRating={this.state.avgRating}
+            cleaningFee={this.state.cleaningFee}
+            maxGuests={this.state.maxGuests}
+            minStay={this.state.maxGuests}
+            nightlyRate={this.state.nightlyRate}
+            owner={this.state.owner}
+            popular={this.state.popular}
+            recentViews={this.state.recentViews}
+            reviewsCount={this.state.reviewsCount}
+            serviceFeeRate={this.state.serviceFeeRate}
+            taxRate={this.state.taxRate}
           />
         </div>
-        <div className="spacing-after">
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-        </div>
+        <div className="spacing-after" style={{ height: '150vh' }} />
       </div>
     );
   }
