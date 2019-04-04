@@ -19,6 +19,8 @@ const listingGen = id => {
   listing.min_stay = getRandomIntInclusive(1, 4);
   listing.service_fee_rate = getRandomIntInclusive(15, 20) / 100;
   listing.recent_views = getRandomIntInclusive(0, 600);
+  listing.reviews_count = getRandomIntInclusive(0, 25);
+  listing.days_since_updated = getRandomIntInclusive(0, 40);
 
   if (Math.random() >= 0.5) {
     listing.popular = true;
