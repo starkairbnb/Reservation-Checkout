@@ -23,18 +23,20 @@ class App extends React.Component {
     Axios.get('/api/reservations/' + getRandomIntInclusive(1, 100))
       .then(
         ({
-          avgRating,
-          cleaningFee,
-          maxGuests,
-          minStay,
-          nightlyRate,
-          owner,
-          popular,
-          recentViews,
-          reviewsCount,
-          serviceFeeRate,
-          taxRate,
-          daysSinceUpdated
+          data: {
+            avgRating,
+            cleaningFee,
+            maxGuests,
+            minStay,
+            nightlyRate,
+            owner,
+            popular,
+            recentViews,
+            reviewsCount,
+            serviceFeeRate,
+            taxRate,
+            daysSinceUpdated
+          }
         }) => {
           this.setState({
             avgRating,

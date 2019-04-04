@@ -19,19 +19,34 @@ class Availability extends React.Component {
   render() {
     return (
       <div className="availability-container">
-        <div>Availability</div>
+        <div style={{ marginBottom: '16px' }}>Availability</div>
         <div>
-          <span>min stay</span> <span>..last updated</span>{' '}
-          <button
-            onClick={() => {
-              this.setState(
-                { focusedInput: START_DATE },
-                this.props.clearDates
-              );
-            }}
-          >
-            Clear Dates
-          </button>
+          {this.props.startDate !== undefined &&
+            this.props.startDate !== null && (
+              <span>
+                {this.props.minStay +
+                  (this.props.minStay === 1
+                    ? ' night minimum stay · '
+                    : ' nights minimum stay · ')}
+              </span>
+            )}
+          <span>
+            Updated{' '}
+            {this.props.daysSinceUpdated +
+              (this.props.minStay === 1 ? ' day ago' : ' days ago')}
+          </span>{' '}
+          {this.props.startDate !== undefined && this.props.startDate !== null && (
+            <button
+              onClick={() => {
+                this.setState(
+                  { focusedInput: START_DATE },
+                  this.props.clearDates
+                );
+              }}
+            >
+              Clear Dates
+            </button>
+          )}
         </div>
         <div>
           <DayPickerRangeController
