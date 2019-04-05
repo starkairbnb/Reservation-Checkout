@@ -1,0 +1,56 @@
+.availability-container {
+}
+
+.availability-header {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+}
+
+.minimum-updated {
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 350 !important;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+}
+
+.clears-dates {
+  float: right;
+  color: var(--color-text-link, #008489) !important;
+  font-size: 16px;
+  font-weight: 350;
+  line-height: 1.375em !important;
+  font-family: var(
+    --font-font_family,
+    Circular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    Helvetica Neue,
+    sans-serif
+  ) !important;
+  text-decoration-line: var(--font-link-text-decoration-line, none) !important;
+  background: transparent !important;
+  border: 0px !important;
+  cursor: pointer !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.clears-dates:hover {
+  text-decoration-line: var(
+    --font-link-text-decoration-line-hover,
+    underline
+  ) !important;
+}
+
+.clears-dates:focus {
+  outline: 0;
+}

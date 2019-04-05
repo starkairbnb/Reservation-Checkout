@@ -7,6 +7,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { START_DATE } from 'react-dates/constants.js';
 
 import '../styles/availability_calendar_override.css';
+import '../styles/availability_styles.css';
 
 class Availability extends React.Component {
   constructor(props) {
@@ -19,8 +20,10 @@ class Availability extends React.Component {
   render() {
     return (
       <div className="availability-container">
-        <div style={{ marginBottom: '16px' }}>Availability</div>
-        <div>
+        <div className="availability-header" style={{ marginBottom: '16px' }}>
+          Availability
+        </div>
+        <div className="minimum-updated">
           {this.props.startDate !== undefined &&
             this.props.startDate !== null && (
               <span>
@@ -37,6 +40,7 @@ class Availability extends React.Component {
           </span>{' '}
           {this.props.startDate !== undefined && this.props.startDate !== null && (
             <button
+              className="clears-dates"
               onClick={() => {
                 this.setState(
                   { focusedInput: START_DATE },
