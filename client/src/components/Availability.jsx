@@ -7,6 +7,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { START_DATE } from 'react-dates/constants.js';
 
 import '../styles/availability_calendar_override.css';
+import '../styles/availability_styles.css';
 
 class Availability extends React.Component {
   constructor(props) {
@@ -19,19 +20,37 @@ class Availability extends React.Component {
   render() {
     return (
       <div className="availability-container">
-        <div>Availability</div>
-        <div>
-          <span>min stay</span> <span>..last updated</span>{' '}
-          <button
-            onClick={() => {
-              this.setState(
-                { focusedInput: START_DATE },
-                this.props.clearDates
-              );
-            }}
-          >
-            Clear Dates
-          </button>
+        <div className="availability-header" style={{ marginBottom: '16px' }}>
+          Availability
+        </div>
+        <div className="minimum-updated">
+          {this.props.startDate !== undefined &&
+            this.props.startDate !== null && (
+              <span>
+                {this.props.minStay +
+                  (this.props.minStay === 1
+                    ? ' night minimum stay · '
+                    : ' nights minimum stay · ')}
+              </span>
+            )}
+          <span>
+            Updated{' '}
+            {this.props.daysSinceUpdated +
+              (this.props.minStay === 1 ? ' day ago' : ' days ago')}
+          </span>{' '}
+          {this.props.startDate !== undefined && this.props.startDate !== null && (
+            <button
+              className="clears-dates"
+              onClick={() => {
+                this.setState(
+                  { focusedInput: START_DATE },
+                  this.props.clearDates
+                );
+              }}
+            >
+              Clear Dates
+            </button>
+          )}
         </div>
         <div>
           <DayPickerRangeController
@@ -59,6 +78,9 @@ class Availability extends React.Component {
               }
             }}
           />
+        </div>
+        <div className="border-holder">
+          <div className="bottom-border" />
         </div>
       </div>
     );
