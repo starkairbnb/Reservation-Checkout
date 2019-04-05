@@ -15,21 +15,55 @@ class BookingDetails extends React.Component {
   render() {
     return (
       <div className="bookings-container">
-        <DateRangePicker
-          startDate={this.props.startDate} // momentPropTypes.momentObj or null,
-          startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-          startDatePlaceholderText="Check-in"
-          endDatePlaceholderText="Checkout"
-          minimumNights={3}
-          numberOfMonths={1}
-          endDate={this.props.endDate} // momentPropTypes.momentObj or null,
-          endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-          onDatesChange={this.props.handleDatesChange}
-          focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-          onFocusChange={focusedInput => {
-            this.setState({ focusedInput });
-          }} // PropTypes.func.isRequired,
-        />
+        <div className="summary-wrapper">
+          <div className="summary-container">
+            <div className="price-per-night">
+              <span className="money">$$$</span>
+              <span>per night</span>
+            </div>
+            <div className="ratings">5 starz</div>
+            <div className="upper-border" />
+          </div>
+          <div className="date-picker-container">
+            <div>Dates</div>
+            <DateRangePicker
+              startDate={this.props.startDate} // momentPropTypes.momentObj or null,
+              startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+              startDatePlaceholderText="Check-in"
+              endDatePlaceholderText="Checkout"
+              minimumNights={3}
+              numberOfMonths={1}
+              endDate={this.props.endDate} // momentPropTypes.momentObj or null,
+              endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+              onDatesChange={this.props.handleDatesChange}
+              focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+              onFocusChange={focusedInput => {
+                this.setState({ focusedInput });
+              }} // PropTypes.func.isRequired,
+            />
+          </div>
+          <div className="guest-picker-container">
+            <div>Guests</div>
+            <div>Guest picker react component</div>
+          </div>
+
+          <div className="button-container">
+            <button>Request to book</button>
+            <div>You won't be charged yet</div>
+          </div>
+
+          <div className="bottom-border" />
+          <div className="special-container">
+            <div className="special-text">
+              <div className="special-title">
+                This home is on people's minds{' '}
+              </div>
+              <div className="special-detail"> It's been viewed 500+ times</div>
+            </div>
+            <div>Here be picture</div>
+          </div>
+        </div>
+        <div>reporting goes here</div>
       </div>
     );
   }
