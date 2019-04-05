@@ -57,6 +57,7 @@ class Availability extends React.Component {
             startDate={this.props.startDate} // momentPropTypes.momentObj or null,
             endDate={this.props.endDate} // momentPropTypes.momentObj or null,
             numberOfMonths={2}
+            minimumNights={this.props.minStay}
             onDatesChange={this.props.handleDatesChange} // PropTypes.func.isRequired,
             focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
             onFocusChange={focusedInput => {

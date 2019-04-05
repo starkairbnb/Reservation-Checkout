@@ -31,6 +31,9 @@
 }
 /* // Will edit everything selected including everything between a range of dates */
 
+.CalendarDay__blocked_minimum_nights,
+.CalendarDay__blocked_minimum_nights:hover,
+.CalendarDay__blocked_minimum_nights:active,
 .CalendarDay__blocked_out_of_range,
 .CalendarDay__blocked_out_of_range:active,
 .CalendarDay__blocked_out_of_range:hover {
