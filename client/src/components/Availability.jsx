@@ -79,6 +79,9 @@ class Availability extends React.Component {
             }}
           />
         </div>
+        <div className="border-holder">
+          <div className="bottom-border" />
+        </div>
       </div>
     );
   }
