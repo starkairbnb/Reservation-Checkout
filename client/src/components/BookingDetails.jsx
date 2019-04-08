@@ -13,15 +13,21 @@ class BookingDetails extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="bookings-container">
         <div className="summary-wrapper">
           <div className="summary-container">
             <div className="price-per-night">
-              <span className="money">$$$</span>
-              <span>per night</span>
+              <span className="money">${this.props.nightlyRate} </span>
+              <span className="per-night">per night</span>
             </div>
-            <div className="ratings">5 starz</div>
+            {this.props.reviewsCount > 0 && (
+              <button className="ratings">
+                <span className="stars">5starz </span>
+                <span className="ratings-count">{this.props.reviewsCount}</span>
+              </button>
+            )}
             <div className="upper-border" />
           </div>
           <div className="date-picker-container">
@@ -40,13 +46,16 @@ class BookingDetails extends React.Component {
               onFocusChange={focusedInput => {
                 this.setState({ focusedInput });
               }} // PropTypes.func.isRequired,
+              renderCalendarInfo={() => {
+                return <div>Clear dates</div>;
+              }}
             />
           </div>
           <div className="guest-picker-container">
             <div>Guests</div>
             <div>Guest picker react component</div>
           </div>
-
+          <div> Order Confirmation component</div>
           <div className="button-container">
             <button>Request to book</button>
             <div>You won't be charged yet</div>
