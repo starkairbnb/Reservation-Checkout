@@ -1,4 +1,5 @@
 import React from 'react';
+import Summary from './Summary.jsx';
 
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
@@ -68,7 +69,13 @@ class BookingDetails extends React.Component {
             <div>Guest picker react component</div>
           </div>
           {this.props.startDate && this.props.endDate && (
-            <div> Order Confirmation component</div>
+            <Summary
+              nightlyRate={this.props.nightlyRate}
+              serviceFeeRate={this.props.serviceFeeRate}
+              cleaningFee={this.props.cleaningFee}
+              taxRate={this.props.taxRate}
+              numNights={4}
+            />
           )}
 
           <div className="button-container">
