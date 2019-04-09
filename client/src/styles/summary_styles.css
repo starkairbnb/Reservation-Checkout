@@ -1,0 +1,22 @@
+.nights-row,
+.cleaning-row,
+.service-row,
+tax-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.2857142857142858em !important;
+  color: #484848 !important;
+}
+
+.summary-border {
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #ebebeb !important;
+  margin-top: 7px;
+  margin-bottom: 10px;
+}

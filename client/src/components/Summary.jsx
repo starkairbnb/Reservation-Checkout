@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/summary_styles.css';
 
 class Summary extends React.Component {
   constructor(props) {
@@ -17,30 +18,51 @@ class Summary extends React.Component {
     );
     return (
       <div className="summary-container">
+        TODO: UPDATE numNights
         {this.props.nightlyRate && (
           <div className="nights-summary-container">
-            <div className="nights-left">
-              {this.props.nightlyRate} x {this.props.numNights} nights
+            <div className="nights-row">
+              <div className="nights-left">
+                <span>
+                  ${this.props.nightlyRate} x {this.props.numNights} nights
+                </span>
+              </div>
+              <div className="nights-right">${nightsTotal}</div>
             </div>
-            <div className="nights-right">${nightsTotal}</div>
+            <div className="summary-border" />
           </div>
         )}
         {this.props.cleaningFee && (
           <div className="cleaning-fee-container">
-            <div className="cleaning-left">Cleaning fee </div>
-            <div className="cleaning-right">${this.props.cleaningFee}</div>
+            <div className="cleaning-row">
+              <div className="cleaning-left">
+                <span>Cleaning fee</span>
+              </div>
+              <div className="cleaning-right">${this.props.cleaningFee}</div>
+            </div>
+            <div className="summary-border" />
           </div>
         )}
         {this.props.serviceFeeRate && (
           <div className="service-fee-container">
-            <div className="service-left">Service fee</div>
-            <div className="service-right">${serviceFee}</div>
+            <div className="service-row">
+              <div className="service-left">
+                <span>Service fee</span>
+              </div>
+              <div className="service-right">${serviceFee}</div>
+            </div>
+            <div className="summary-border" />
           </div>
         )}
         {this.props.taxRate && (
           <div className="tax-container">
-            <div className="tax-left">Occupancy taxes and fees</div>
-            <div className="tax-right">${taxes}</div>
+            <div className="tax-row">
+              <div className="tax-left">
+                <span>Occupancy taxes and fees</span>
+              </div>
+              <div className="tax-right">${taxes}</div>
+            </div>
+            <div className="summary-border" />
           </div>
         )}
       </div>
