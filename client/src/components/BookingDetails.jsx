@@ -94,7 +94,14 @@ class BookingDetails extends React.Component {
             <div>Here be picture</div>
           </div>
         </div>
-        <div>reporting goes here</div>
+        <div className="reporting-container">
+          <div className="reporting-cell">
+            <button className="reporting-flex">
+              <div>icon</div>
+              <div>Report this listing</div>
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
