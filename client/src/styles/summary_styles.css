@@ -1,7 +1,7 @@
 .nights-row,
 .cleaning-row,
 .service-row,
-tax-row {
+.tax-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
