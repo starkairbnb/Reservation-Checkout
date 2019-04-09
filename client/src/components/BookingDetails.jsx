@@ -83,15 +83,20 @@ class BookingDetails extends React.Component {
             <div className="reassurance">You won't be charged yet</div>
           </div>
 
-          <div className="bottom-border" />
           <div className="special-container">
-            <div className="special-text">
-              <div className="special-title">
-                This home is on people's minds{' '}
+            <div className="bottom-border" />
+            <div className="special-flex">
+              <div className="special-text">
+                <div className="special-title">
+                  This home is on people's minds{' '}
+                </div>
+                <div className="special-detail">
+                  {' '}
+                  It's been viewed 500+ times
+                </div>
               </div>
-              <div className="special-detail"> It's been viewed 500+ times</div>
+              <div>Here be picture</div>
             </div>
-            <div>Here be picture</div>
           </div>
         </div>
         <div className="reporting-container">
