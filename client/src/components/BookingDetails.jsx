@@ -74,13 +74,13 @@ class BookingDetails extends React.Component {
               serviceFeeRate={this.props.serviceFeeRate}
               cleaningFee={this.props.cleaningFee}
               taxRate={this.props.taxRate}
-              numNights={4}
+              numNights={this.props.endDate.diff(this.props.startDate, 'days')}
             />
           )}
 
           <div className="button-container">
-            <button>Request to book</button>
-            <div>You won't be charged yet</div>
+            <button className="book-button">Book</button>
+            <div className="reassurance">You won't be charged yet</div>
           </div>
 
           <div className="bottom-border" />

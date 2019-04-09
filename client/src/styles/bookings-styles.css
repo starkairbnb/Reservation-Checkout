@@ -108,3 +108,40 @@
   margin-top: 7px;
   margin-bottom: 10px;
 }
+
+.book-button {
+  background: rgb(255, 90, 95);
+  border: transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: var(
+    --font-button-font-family,
+    Circular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    Helvetica Neue,
+    sans-serif
+  ) !important;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 15px;
+}
+
+.reassurance {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(72, 72, 72);
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+}
