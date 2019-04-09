@@ -14,6 +14,7 @@ class BookingDetails extends React.Component {
 
   render() {
     console.log(this.props);
+
     return (
       <div className="bookings-container">
         <div className="summary-wrapper">
@@ -31,13 +32,13 @@ class BookingDetails extends React.Component {
             <div className="upper-border" />
           </div>
           <div className="date-picker-container">
-            <div>Dates</div>
+            <div className="dates-header">Dates</div>
             <DateRangePicker
               startDate={this.props.startDate} // momentPropTypes.momentObj or null,
               startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
               startDatePlaceholderText="Check-in"
               endDatePlaceholderText="Checkout"
-              minimumNights={3}
+              minimumNights={this.props.minStay}
               numberOfMonths={1}
               endDate={this.props.endDate} // momentPropTypes.momentObj or null,
               endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
@@ -47,15 +48,29 @@ class BookingDetails extends React.Component {
                 this.setState({ focusedInput });
               }} // PropTypes.func.isRequired,
               renderCalendarInfo={() => {
-                return <div>Clear dates</div>;
+                if (this.props.startDate || this.props.endDate) {
+                  return (
+                    <div className="clears-dates-container">
+                      <button
+                        className="clears-dates-bookings"
+                        onClick={this.props.clearDates}
+                      >
+                        Clear Dates
+                      </button>
+                    </div>
+                  );
+                }
               }}
             />
           </div>
           <div className="guest-picker-container">
-            <div>Guests</div>
+            <div className="guests-header">Guests</div>
             <div>Guest picker react component</div>
           </div>
-          <div> Order Confirmation component</div>
+          {this.props.startDate && this.props.endDate && (
+            <div> Order Confirmation component</div>
+          )}
+
           <div className="button-container">
             <button>Request to book</button>
             <div>You won't be charged yet</div>

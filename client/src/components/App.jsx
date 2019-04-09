@@ -87,7 +87,7 @@ class App extends React.Component {
             avgRating={this.state.avgRating}
             cleaningFee={this.state.cleaningFee}
             maxGuests={this.state.maxGuests}
-            minStay={this.state.maxGuests}
+            minStay={this.state.minStay}
             nightlyRate={this.state.nightlyRate}
             owner={this.state.owner}
             popular={this.state.popular}
@@ -95,6 +95,7 @@ class App extends React.Component {
             reviewsCount={this.state.reviewsCount}
             serviceFeeRate={this.state.serviceFeeRate}
             taxRate={this.state.taxRate}
+            clearDates={this.clearDates}
           />
         </div>
         <div className="spacing-after" style={{ height: '150vh' }} />
