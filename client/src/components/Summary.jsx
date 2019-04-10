@@ -59,7 +59,6 @@ class Summary extends React.Component {
                 <div className="title">
                   ${this.props.nightlyRate} x {this.props.numNights} nights
                 </div>
-                <button className="question">{icon}</button>
               </div>
               <div className="nights-right">${nightsTotal}</div>
             </div>
@@ -70,8 +69,14 @@ class Summary extends React.Component {
           <div className="cleaning-fee-container">
             <div className="cleaning-row">
               <div className="cleaning-left">
-                <div className="title">Cleaning fee</div>
-                <button className="question">{icon}</button>
+                <div className="title">Cleaning fee </div>
+                <button className="question tooltip">
+                  {icon}
+                  <span className="tooltiptext cleaning-tip">
+                    One-time fee charged by host to cover the cost of cleaning
+                    their space.
+                  </span>
+                </button>
               </div>
               <div className="cleaning-right">${this.props.cleaningFee}</div>
             </div>
@@ -83,7 +88,13 @@ class Summary extends React.Component {
             <div className="service-row">
               <div className="service-left">
                 <div className="title">Service fee</div>
-                <button className="question">{icon}</button>
+                <button className="question tooltip">
+                  {icon}
+                  <span className="tooltiptext service-tip">
+                    This helps us run our platform and offer services like 24/7
+                    support on your trip.
+                  </span>
+                </button>
               </div>
               <div className="service-right">${serviceFee}</div>
             </div>
@@ -95,7 +106,13 @@ class Summary extends React.Component {
             <div className="tax-row">
               <div className="tax-left">
                 <div className="title">Occupancy taxes and fees</div>
-                <button className="question">{icon}</button>
+                <button className="question tooltip">
+                  {icon}
+                  <span className="tooltiptext tax-tip">
+                    This is a municipal accomodations tax necessary for
+                    ShareBnB.
+                  </span>
+                </button>
               </div>
               <div className="tax-right">${taxes}</div>
             </div>
@@ -120,7 +137,13 @@ class Summary extends React.Component {
         <div className="due-later-container">
           <div className="due-later-left">
             <div className="due-later-text">Due on</div>
-            <button className="question">{icon}</button>
+            <button className="question tooltip">
+              {icon}
+              <span className="tooltiptext due-tip">
+                If you prefer to pay the full reservation amount now, you can
+                choose this option in Confirm and pay.
+              </span>
+            </button>
           </div>
           <div className="due-later-">${(total / 2).toFixed(2)}</div>
         </div>

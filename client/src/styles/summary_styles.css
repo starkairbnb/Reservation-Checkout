@@ -3,7 +3,6 @@
 }
 
 .cleaning-left,
-.nights-left,
 .service-left,
 .tax-left,
 .due-later-left {
@@ -41,7 +40,7 @@
   border: transparent;
   width: 15px;
   height: 15px;
-  z-index: 50;
+  z-index: 0;
 }
 .question:focus > .icon {
   fill: rgb(216, 216, 216);
@@ -90,4 +89,62 @@
   border-bottom-color: #ebebeb !important;
   margin-top: 7px;
   margin-bottom: 10px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 304px;
+  background-color: white;
+  color: #484848;
+  text-align: left;
+  padding: 5px 0;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
+  font-size: 14px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(235, 235, 235);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+  padding: 24px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 5001;
+}
+
+.tooltip .tooltiptext::after {
+  content: ' ';
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 80%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.due-tip {
+  top: 300%;
+  right: 65%;
+}
+
+.cleaning-tip {
+  top: -50%;
+  right: 200px;
+}
+
+.service-tip {
+  top: 10px;
+  right: 10px;
+}
+
+.tax-tip {
+  top: 10px;
+  right: 10px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:focus .tooltiptext {
+  visibility: visible;
+  z-index: 5001;
 }
