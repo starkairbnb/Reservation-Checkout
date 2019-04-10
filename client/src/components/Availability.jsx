@@ -18,7 +18,6 @@ class Availability extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="availability-container">
         <div className="availability-header" style={{ marginBottom: '16px' }}>

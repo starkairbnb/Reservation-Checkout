@@ -20,16 +20,46 @@ class Summary extends React.Component {
 
     let total = taxes + serviceFee + this.props.cleaningFee + nightsTotal;
 
+    let icon = (
+      <svg
+        className="icon"
+        viewBox="0 0 24 24"
+        role="img"
+        aria-label="Learn more"
+        focusable="false"
+      >
+        <path
+          d="m12 0c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12-5.37-12-12-12zm0 23c-6.07 0-11-4.92-11-11s4.93-11 11-11 11 4.93 11 11-4.93 11-11 11zm4.75-14c0 1.8-.82 2.93-2.35 3.89-.23.14-1 .59-1.14.67-.4.25-.51.38-.51.44v2a .75.75 0 0 1 -1.5 0v-2c0-.74.42-1.22 1.22-1.72.17-.11.94-.55 1.14-.67 1.13-.71 1.64-1.41 1.64-2.61a3.25 3.25 0 0 0 -6.5 0 .75.75 0 0 1 -1.5 0 4.75 4.75 0 0 1 9.5 0zm-3.75 10a1 1 0 1 1 -2 0 1 1 0 0 1 2 0z"
+          fillRule="evenodd"
+        />
+      </svg>
+    );
+
+    let icon2 = (
+      <svg
+        className="icon"
+        viewBox="0 0 24 24"
+        role="img"
+        aria-label="Learn more"
+        focusable="false"
+      >
+        <path
+          d="m 17 9 c 0 -4.42 -3.58 -8 -8 -8 s -8 3.58 -8 8 s 3.58 8 8 8 s 8 -3.58 8 -8 m 1 0 c 0 4.97 -4.03 9 -9 9 s -9 -4.03 -9 -9 s 4.03 -9 9 -9 s 9 4.03 9 9 m -9 -5.25 c -0.69 0 -1.25 0.56 -1.25 1.25 s 0.56 1.25 1.25 1.25 s 1.25 -0.56 1.25 -1.25 s -0.56 -1.25 -1.25 -1.25 m 0 4.25 c 0.55 0 1 0.45 1 1 v 5 c 0 0.55 -0.45 1 -1 1 s -1 -0.45 -1 -1 v -5 c 0 -0.55 0.45 -1 1 -1"
+          fillRule="evenodd"
+        />
+      </svg>
+    );
+
     return (
       <div className="summary-container">
         {this.props.nightlyRate && (
           <div className="nights-summary-container">
             <div className="nights-row">
               <div className="nights-left">
-                <span>
+                <div className="title">
                   ${this.props.nightlyRate} x {this.props.numNights} nights
-                </span>
-                <span>icon</span>
+                </div>
+                <button className="question">{icon}</button>
               </div>
               <div className="nights-right">${nightsTotal}</div>
             </div>
@@ -40,8 +70,8 @@ class Summary extends React.Component {
           <div className="cleaning-fee-container">
             <div className="cleaning-row">
               <div className="cleaning-left">
-                <span>Cleaning fee</span>
-                <span>icon</span>
+                <div className="title">Cleaning fee</div>
+                <button className="question">{icon}</button>
               </div>
               <div className="cleaning-right">${this.props.cleaningFee}</div>
             </div>
@@ -52,8 +82,8 @@ class Summary extends React.Component {
           <div className="service-fee-container">
             <div className="service-row">
               <div className="service-left">
-                <span>Service fee</span>
-                <span>icon</span>
+                <div className="title">Service fee</div>
+                <button className="question">{icon}</button>
               </div>
               <div className="service-right">${serviceFee}</div>
             </div>
@@ -64,8 +94,8 @@ class Summary extends React.Component {
           <div className="tax-container">
             <div className="tax-row">
               <div className="tax-left">
-                <span>Occupancy taxes and fees</span>
-                <span>icon</span>
+                <div className="title">Occupancy taxes and fees</div>
+                <button className="question">{icon}</button>
               </div>
               <div className="tax-right">${taxes}</div>
             </div>
@@ -81,7 +111,7 @@ class Summary extends React.Component {
         </div>
         <div className="payment-details-container">
           <span className="payment-details-text">PAYMENT DETAILS</span>
-          <span className="payment-details-icon">icon</span>
+          <span className="payment-details-icon">{icon2}</span>
         </div>
         <div className="due-now-container">
           <div className="due-now-text">Due now</div>
@@ -89,8 +119,8 @@ class Summary extends React.Component {
         </div>
         <div className="due-later-container">
           <div className="due-later-left">
-            <span className="due-later-text">Due on</span>
-            <span>icon</span>
+            <div className="due-later-text">Due on</div>
+            <button className="question">{icon}</button>
           </div>
           <div className="due-later-">${(total / 2).toFixed(2)}</div>
         </div>

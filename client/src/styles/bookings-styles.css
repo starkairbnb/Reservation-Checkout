@@ -3,6 +3,7 @@
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 40px;
+  width: 374px;
 }
 
 .guests-header,
@@ -178,8 +179,22 @@
   cursor: pointer;
   border: 0;
   text-decoration-line: none;
+  align-content: center;
+  justify-content: center;
 }
 
 .reporting-flex:hover {
   text-decoration-line: underline;
+}
+
+.reportIcon {
+  height: 15px;
+  width: 15px;
+  display: block;
+  fill: currentColor;
+  margin: 5px;
+}
+
+.report {
+  align-self: center;
 }

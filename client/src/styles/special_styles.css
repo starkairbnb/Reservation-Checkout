@@ -1,0 +1,23 @@
+.special-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.special-text {
+  font-size: 14px;
+  color: rgb(72, 72, 72);
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+}
+
+.special-title {
+  font-weight: 450;
+  padding-bottom: 10px;
+}
+
+.special-detail {
+  font-weight: 300;
+}
