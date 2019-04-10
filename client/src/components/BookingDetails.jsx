@@ -1,5 +1,6 @@
 import React from 'react';
 import Summary from './Summary.jsx';
+import SpecialBox from './SpecialBox.jsx';
 
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
@@ -82,8 +83,12 @@ class BookingDetails extends React.Component {
             <button className="book-button">Book</button>
             <div className="reassurance">You won't be charged yet</div>
           </div>
-
-          <div className="special-container">
+          <SpecialBox
+            owner={this.props.owner}
+            popular={this.props.popular}
+            recentViews={this.props.recentViews}
+          />
+          {/* <div className="special-container">
             <div className="bottom-border" />
             <div className="special-flex">
               <div className="special-text">
@@ -97,7 +102,7 @@ class BookingDetails extends React.Component {
               </div>
               <div>Here be picture</div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="reporting-container">
           <div className="reporting-cell">

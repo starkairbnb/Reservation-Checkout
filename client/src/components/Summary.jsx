@@ -7,7 +7,6 @@ class Summary extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let nightsTotal = this.props.nightlyRate * this.props.numNights;
 
     let serviceFee = Math.round(
