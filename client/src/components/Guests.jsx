@@ -1,5 +1,4 @@
 import React from 'react';
-import Dropdown from './GuestDropdown'
 
 class Guests extends React.Component {
   constructor(props) {
@@ -15,12 +14,10 @@ class Guests extends React.Component {
     return (
       <div>
         <div>
-          <button>
-            {this.state.guests} guests
-          </button>
+          <button>{this.state.guests} guests</button>
         </div>
       </div>
-    )
+    );
   }
 }
 

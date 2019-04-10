@@ -1,6 +1,7 @@
 import React from 'react';
 import Summary from './Summary.jsx';
 import SpecialBox from './SpecialBox.jsx';
+import GuestDropdown from './GuestDropdown.jsx';
 
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
@@ -81,7 +82,7 @@ class BookingDetails extends React.Component {
           </div>
           <div className="guest-picker-container">
             <div className="guests-header">Guests</div>
-            <div>Guest picker react component</div>
+            <GuestDropdown maxGuests={this.props.maxGuests} />
           </div>
           {this.props.startDate && this.props.endDate && (
             <Summary
