@@ -4,6 +4,7 @@
   position: sticky;
   top: 40px;
   width: 374px;
+  z-index: 5000;
 }
 
 .guests-header,
@@ -132,7 +133,7 @@
   color: white;
   text-align: center;
   cursor: pointer;
-  position: relative;
+  position: static;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;

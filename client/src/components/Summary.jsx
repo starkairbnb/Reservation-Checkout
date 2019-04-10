@@ -49,6 +49,20 @@ class Summary extends React.Component {
         />
       </svg>
     );
+    let icon3 = (
+      <svg
+        className="icon3"
+        viewBox="0 0 24 24"
+        role="img"
+        aria-label="Close"
+        focusable="false"
+      >
+        <path
+          d="m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22"
+          fillRule="evenodd"
+        />
+      </svg>
+    );
 
     return (
       <div className="summary-container">
@@ -59,7 +73,6 @@ class Summary extends React.Component {
                 <div className="title">
                   ${this.props.nightlyRate} x {this.props.numNights} nights
                 </div>
-                <button className="question">{icon}</button>
               </div>
               <div className="nights-right">${nightsTotal}</div>
             </div>
@@ -70,8 +83,17 @@ class Summary extends React.Component {
           <div className="cleaning-fee-container">
             <div className="cleaning-row">
               <div className="cleaning-left">
-                <div className="title">Cleaning fee</div>
-                <button className="question">{icon}</button>
+                <div className="title">Cleaning fee </div>
+                <button className="question tooltip">
+                  {icon}
+                  <span className="tooltiptext cleaning-tip">
+                    One-time fee charged by host to cover the cost of cleaning
+                    their space.
+                    <div className="x-button" tabIndex="-1">
+                      {icon3}
+                    </div>
+                  </span>
+                </button>
               </div>
               <div className="cleaning-right">${this.props.cleaningFee}</div>
             </div>
@@ -83,7 +105,16 @@ class Summary extends React.Component {
             <div className="service-row">
               <div className="service-left">
                 <div className="title">Service fee</div>
-                <button className="question">{icon}</button>
+                <button className="question tooltip">
+                  {icon}
+                  <span className="tooltiptext service-tip">
+                    This helps us run our platform and offer services like 24/7
+                    support on your trip.
+                    <div className="x-button" tabIndex="-1">
+                      {icon3}
+                    </div>
+                  </span>
+                </button>
               </div>
               <div className="service-right">${serviceFee}</div>
             </div>
@@ -95,7 +126,16 @@ class Summary extends React.Component {
             <div className="tax-row">
               <div className="tax-left">
                 <div className="title">Occupancy taxes and fees</div>
-                <button className="question">{icon}</button>
+                <button className="question tooltip">
+                  {icon}
+                  <span className="tooltiptext tax-tip">
+                    This is a municipal accomodations tax necessary for
+                    ShareBnB.
+                    <div className="x-button" tabIndex="-1">
+                      {icon3}
+                    </div>
+                  </span>
+                </button>
               </div>
               <div className="tax-right">${taxes}</div>
             </div>
@@ -120,7 +160,16 @@ class Summary extends React.Component {
         <div className="due-later-container">
           <div className="due-later-left">
             <div className="due-later-text">Due on</div>
-            <button className="question">{icon}</button>
+            <button className="question tooltip">
+              {icon}
+              <span className="tooltiptext due-tip">
+                If you prefer to pay the full reservation amount now, you can
+                choose this option in Confirm and pay.
+                <div className="x-button" tabIndex="-1">
+                  {icon3}
+                </div>
+              </span>
+            </button>
           </div>
           <div className="due-later-">${(total / 2).toFixed(2)}</div>
         </div>
