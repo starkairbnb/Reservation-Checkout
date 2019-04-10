@@ -16,7 +16,7 @@ const listingGen = id => {
   listing.nightlyRate = listing.maxGuests * (getRandomIntInclusive(0, 20) + 25);
   listing.avgRating = getRandomIntInclusive(0, 2) / 2 + 4;
   listing.minStay = getRandomIntInclusive(1, 4);
-  listing.serviceFeeRate = getRandomIntInclusive(15, 20) / 100;
+  listing.serviceFeeRate = getRandomIntInclusive(10, 15) / 100;
   listing.recentViews = getRandomIntInclusive(0, 600);
   listing.reviewsCount = getRandomIntInclusive(0, 25);
   listing.daysSinceUpdated = getRandomIntInclusive(0, 40);

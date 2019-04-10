@@ -2,3 +2,15 @@
   display: flex;
   flex-direction: row;
 }
+
+.flex-container *,
+.flex-container *:before,
+.flex-container *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.spacing-above {
+  margin-right: 60px;
+}

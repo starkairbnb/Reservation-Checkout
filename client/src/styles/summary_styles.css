@@ -1,0 +1,93 @@
+.summary-container {
+  margin-top: 20px;
+}
+
+.cleaning-left,
+.nights-left,
+.service-left,
+.tax-left,
+.due-later-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-details-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.title,
+.due-later-text {
+  margin-right: 5px;
+}
+
+.icon {
+  height: 15px;
+  width: 15px;
+  display: block;
+  fill: rgb(72, 72, 72);
+}
+
+.icon:hover {
+  fill: rgb(0, 132, 137);
+  cursor: pointer;
+}
+
+.question {
+  padding: 0;
+  margin: 0;
+  border: transparent;
+  width: 15px;
+  height: 15px;
+  z-index: 50;
+}
+.question:focus > .icon {
+  fill: rgb(216, 216, 216);
+}
+
+.nights-row,
+.cleaning-row,
+.service-row,
+.tax-row,
+.total-row,
+.due-now-container,
+.due-later-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.2857142857142858em !important;
+  color: #484848 !important;
+}
+
+.payment-details-text {
+  font-size: 9px;
+  color: rgb(72, 72, 72);
+  font-weight: 600;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  margin-right: 5px;
+}
+
+.due-now-text,
+.due-now {
+  color: rgb(72, 72, 72);
+  font-weight: 600;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.summary-border {
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #ebebeb !important;
+  margin-top: 7px;
+  margin-bottom: 10px;
+}

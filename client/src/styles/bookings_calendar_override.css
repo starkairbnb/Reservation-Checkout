@@ -1,0 +1,36 @@
+.DateRangePicker_picker {
+  z-index: 5000;
+}
+
+.DateRangePickerInput,
+.DateRangePicker {
+  width: 100%;
+}
+
+.DateInput {
+  margin-left: 15px;
+}
+
+.DateRangePickerInput {
+}
+
+.CalendarDay__selected_span {
+  background: #82e0aa;
+  color: white;
+  border: 1px solid light-red;
+}
+
+.CalendarDay__selected {
+  background: dark-red;
+  color: white;
+}
+
+.CalendarDay__selected:hover {
+  background: orange;
+  color: white;
+}
+
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: brown;
+}
