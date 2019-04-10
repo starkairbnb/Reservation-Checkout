@@ -25,7 +25,7 @@ class GuestDropdown extends React.Component {
             <span>Adults</span>
             <button>-</button>
             <span>{this.state}</span>
-            <button>-</button>
+            <button>+</button>
           </div>
         </div>
       </div>

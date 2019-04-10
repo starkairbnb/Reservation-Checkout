@@ -4,3 +4,107 @@
   position: sticky;
   top: 40px;
 }
+
+.guests-header,
+.dates-header {
+  overflow-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.33333em !important;
+  color: rgb(72, 72, 72) !important;
+  margin-top: 20px;
+  margin-bottom: 1px;
+}
+
+.summary-wrapper {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  margin: 0px !important;
+  border: 1px solid #e4e4e4 !important;
+  background-color: #ffffff !important;
+}
+
+.price-per-night {
+  margin-top: 12px;
+}
+
+.money {
+  font-size: 22px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  color: rgb(72, 72, 72) !important;
+  font-weight: 800;
+}
+
+.per-night {
+  overflow-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.33333em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px !important;
+}
+
+.ratings {
+  margin-top: 6px;
+  margin-bottom: 5px;
+  background: transparent;
+  cursor: pointer;
+  border: 0px;
+  padding: 0px;
+}
+
+.ratings:focus {
+  outline: 0;
+}
+
+.ratings-count {
+  overflow-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.33333em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px !important;
+}
+
+.clears-dates-container {
+  padding: 0px 30px 35px;
+}
+
+.clears-dates-bookings {
+  float: right;
+  color: var(--color-text-link, #008489) !important;
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.375em !important;
+  font-family: var(
+    --font-font_family,
+    Circular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    Helvetica Neue,
+    sans-serif
+  ) !important;
+  text-decoration-line: var(--font-link-text-decoration-line, none) !important;
+  background: transparent !important;
+  border: 0px !important;
+  cursor: pointer !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.upper-border,
+.bottom-border {
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #ebebeb !important;
+  margin-top: 7px;
+  margin-bottom: 10px;
+}
