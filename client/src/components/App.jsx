@@ -70,7 +70,7 @@ class App extends React.Component {
       <div className="main-body">
         <div className="flex-container">
           <div className="left-col">
-            <div style={{ height: '150vh' }} />
+            <div id="description" />
             <Availability
               handleDatesChange={this.handleDatesChange}
               startDate={this.state.startDate}
@@ -79,6 +79,10 @@ class App extends React.Component {
               minStay={this.state.minStay}
               daysSinceUpdated={this.state.daysSinceUpdated}
             />
+            <div id="reviews" />
+            <div id="hosted" />
+            <div id="location" />
+            <div id="policy" />
           </div>
           <BookingDetails
             handleDatesChange={this.handleDatesChange}
@@ -98,7 +102,6 @@ class App extends React.Component {
             clearDates={this.clearDates}
           />
         </div>
-        <div className="spacing-after" style={{ height: '150vh' }} />
       </div>
     );
   }
