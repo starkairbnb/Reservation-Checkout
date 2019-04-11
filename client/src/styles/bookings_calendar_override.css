@@ -12,22 +12,25 @@
 }
 
 .CalendarDay__selected_span {
-  background: #82e0aa;
-  color: white;
-  border: 1px solid light-red;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 166, 153);
+  border: 1px solid #00a699;
 }
 
 .CalendarDay__selected {
-  background: dark-red;
-  color: white;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 166, 153);
+  border: 1px solid #00a699;
 }
 
 .CalendarDay__selected:hover {
-  background: orange;
-  color: white;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 166, 153);
 }
 
 .CalendarDay__hovered_span:hover,
 .CalendarDay__hovered_span {
-  background: brown;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 166, 153);
+  border: 1px solid #00a699;
 }

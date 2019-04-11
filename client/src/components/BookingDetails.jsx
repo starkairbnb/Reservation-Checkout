@@ -17,6 +17,50 @@ class BookingDetails extends React.Component {
   }
 
   render() {
+    let starz = (
+      <div className="stars">
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        {this.props.avgRating === 4.5 && (
+          <img
+            src="https://s3-us-west-1.amazonaws.com/sharebnbicons/half+star+icon.png"
+            alt=""
+            height="11.5px"
+            width="11.5px"
+          />
+        )}
+        {this.props.avgRating === 5 && (
+          <img
+            src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+            alt=""
+            height="12px"
+            width="12px"
+          />
+        )}
+      </div>
+    );
     let reportIcon = (
       <svg
         viewBox="0 0 24 24"
@@ -41,8 +85,15 @@ class BookingDetails extends React.Component {
               <span className="per-night">per night</span>
             </div>
             {this.props.reviewsCount > 0 && (
-              <button className="ratings">
-                <span className="stars">5starz </span>
+              <button
+                className="ratings"
+                onClick={() => {
+                  document.getElementById('reviews').scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }}
+              >
+                {starz}
                 <span className="ratings-count">{this.props.reviewsCount}</span>
               </button>
             )}
