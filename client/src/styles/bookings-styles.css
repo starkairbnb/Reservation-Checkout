@@ -7,6 +7,14 @@
   z-index: 5000;
 }
 
+.guest-picker-container {
+  z-index: 500;
+}
+
+.summary-cont {
+  z-index: 0;
+}
+
 .guests-header,
 .dates-header {
   overflow-wrap: break-word !important;
@@ -138,6 +146,91 @@
   padding-top: 12px;
   padding-bottom: 12px;
   margin-top: 15px;
+}
+
+.guest-text-area {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.guestsType {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 16px;
+  color: #484848;
+  font-weight: 500;
+}
+
+.guestsDesc {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+.single-guest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.guest-button-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.subtract-button,
+.add-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: #008489;
+  outline: none;
+  cursor: pointer;
+  justify-items: center;
+  align-items: center;
+  padding-left: 7px;
+  padding-top: 2px;
+}
+
+.subtract-button:active,
+.add-button:active {
+  box-shadow: 0 0 2px 2px #008489;
+  outline: none;
+  border-color: #008489;
+}
+
+.typeCount {
+  width: 15px;
+  height: 15px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 16px;
+  color: #484848;
+  font-weight: 500;
+  padding-top: 11px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.add-icon {
+  height: 24px;
+  width: 24px;
+  display: block;
+  fill: #008489;
+}
+
+.subtract-icon {
+  height: 24px;
+  width: 24px;
+  display: block;
+  fill: #008489;
 }
 
 .reassurance {

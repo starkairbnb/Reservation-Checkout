@@ -35,14 +35,14 @@
 }
 
 .question {
-  position: relative;
+  position: static;
   outline: none;
   padding: 0;
   margin: 0;
   border: transparent;
   width: 15px;
   height: 15px;
-  z-index: 0;
+  z-index: -0;
 }
 .question:focus > .icon {
   fill: rgb(216, 216, 216);

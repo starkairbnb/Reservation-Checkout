@@ -8,9 +8,9 @@ class GuestDropdown extends React.Component {
     super(props);
 
     this.state = {
-      adults: 1,
-      children: 0,
-      infants: 1,
+      Adults: 1,
+      Children: 0,
+      Infants: 0,
       open: false
     };
   }
@@ -43,9 +43,9 @@ class GuestDropdown extends React.Component {
           >
             <div className="guests-button-flex">
               <div className="guests-button-text">
-                {this.state.adults + this.state.children} Guests
-                {this.state.infants > 0
-                  ? `, ${this.state.infants} infants`
+                {this.state.Adults + this.state.Children} Guests
+                {this.state.Infants > 0
+                  ? `, ${this.state.Infants} infants`
                   : ''}
               </div>
               {carrot}
@@ -54,7 +54,23 @@ class GuestDropdown extends React.Component {
           {this.state.open && (
             <div className="guests-buttons-container">
               <div className="guests-component-container">
-                <Guests />
+                <Guests
+                  guestsType="Adults"
+                  currentGuests={this.state.Adults + this.state.Children}
+                  typeCount={this.state.Adults}
+                  //maxOfType
+                  //minOfType
+                />
+                <Guests
+                  guestsType="Children"
+                  description="Ages 2-12"
+                  typeCount={this.state.Children}
+                />
+                <Guests
+                  guestsType="Infants"
+                  description="Under 2"
+                  typeCount={this.state.Infants}
+                />
               </div>
               <div className="max-guests">
                 {`${

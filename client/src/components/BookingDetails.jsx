@@ -84,15 +84,20 @@ class BookingDetails extends React.Component {
             <div className="guests-header">Guests</div>
             <GuestDropdown maxGuests={this.props.maxGuests} />
           </div>
-          {this.props.startDate && this.props.endDate && (
-            <Summary
-              nightlyRate={this.props.nightlyRate}
-              serviceFeeRate={this.props.serviceFeeRate}
-              cleaningFee={this.props.cleaningFee}
-              taxRate={this.props.taxRate}
-              numNights={this.props.endDate.diff(this.props.startDate, 'days')}
-            />
-          )}
+          <div className="summary-cont">
+            {this.props.startDate && this.props.endDate && (
+              <Summary
+                nightlyRate={this.props.nightlyRate}
+                serviceFeeRate={this.props.serviceFeeRate}
+                cleaningFee={this.props.cleaningFee}
+                taxRate={this.props.taxRate}
+                numNights={this.props.endDate.diff(
+                  this.props.startDate,
+                  'days'
+                )}
+              />
+            )}
+          </div>
 
           <div className="button-container">
             <button className="book-button">Book</button>

@@ -31,6 +31,7 @@
   border-top: 2px solid #008489;
   border-radius: 2px;
   padding: 15px;
+  z-index: 1;
 }
 
 .guests-button-flex {
@@ -44,10 +45,12 @@
   width: 16px;
   display: block;
   fill: #484848;
+  margin-top: 2px;
+  transform: rotate(180deg);
 }
 
 .carrot.open_guests {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .max-guests {
