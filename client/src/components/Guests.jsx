@@ -34,7 +34,6 @@ class Guests extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let button = (
       <div className="guest-button-container">
         <button
