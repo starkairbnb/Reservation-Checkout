@@ -143,22 +143,22 @@
 }
 
 .cleaning-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 10px;
+  right: 10px;
 }
 
 .service-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 56%;
+  right: 54.3%;
 }
 
 .tax-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 54.4%;
+  right: 28%;
 }
 .due-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 37%;
+  right: 61%;
 }
 
 .x-button {
@@ -178,5 +178,5 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:focus .tooltiptext {
   visibility: visible;
-  z-index: 5001;
+  z-index: 5005;
 }
