@@ -6,8 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
-  <body>
+  <!-- <body>
     <div id="reservation"></div>
     <script src="bundle.js"></script>
+  </body> -->
+  <body>
+    <div id="reservation"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="http://localhost:3003/bundle.js"></script>
+    <script>
+      ReactDOM.render(
+        React.createElement(Reservation),
+        document.getElementById('reservation')
+      );
+    </script>
   </body>
 </html>
