@@ -69,7 +69,7 @@ class App extends React.Component {
     return (
       <div className="main-body">
         <div className="flex-container">
-          <div className="spacing-above">
+          <div className="left-col">
             <div style={{ height: '150vh' }} />
             <Availability
               handleDatesChange={this.handleDatesChange}

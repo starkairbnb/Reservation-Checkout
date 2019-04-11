@@ -1,10 +1,18 @@
 .bookings-container {
-  height: 15vh;
+  height: min-content;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 40px;
   width: 374px;
   z-index: 5000;
+}
+
+.guest-picker-container {
+  z-index: 500;
+}
+
+.summary-cont {
+  z-index: 0;
 }
 
 .guests-header,
@@ -58,6 +66,13 @@
   cursor: pointer;
   border: 0px;
   padding: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.stars {
+  padding-top: 1px;
+  padding-right: 5px;
 }
 
 .ratings:focus {
@@ -73,6 +88,7 @@
   line-height: 1.33333em !important;
   color: rgb(72, 72, 72) !important;
   margin: 0px !important;
+  margin-left: 5px;
 }
 
 .clears-dates-container {
@@ -140,10 +156,105 @@
   margin-top: 15px;
 }
 
+.guest-text-area {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.guestsType {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 16px;
+  color: #484848;
+  font-weight: 500;
+}
+
+.guestsDesc {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+.single-guest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.guest-button-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.subtract-button,
+.add-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: #008489;
+  outline: none;
+  cursor: pointer;
+  justify-items: center;
+  align-items: center;
+  padding-left: 7px;
+  padding-top: 2px;
+}
+
+.subtract-button:active,
+.add-button:active {
+  box-shadow: 0 0 2px 2px #008489;
+  outline: none;
+  border-color: #008489;
+}
+
+.subtract-button:disabled,
+.add-button:disabled {
+  border-color: rgba(0, 132, 137, 0.3);
+}
+
+.subtract-button:disabled svg,
+.add-button:disabled svg {
+  fill: rgba(0, 132, 137, 0.3);
+}
+
+.typeCount {
+  width: 15px;
+  height: 15px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+  font-size: 16px;
+  color: #484848;
+  font-weight: 500;
+  padding-top: 11px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.add-icon {
+  height: 24px;
+  width: 24px;
+  display: block;
+  fill: #008489;
+}
+
+.subtract-icon {
+  height: 24px;
+  width: 24px;
+  display: block;
+  fill: #008489;
+}
+
 .reassurance {
   text-align: center;
   width: 100%;
-  position: relative;
+  position: static;
   padding: 7px;
   font-size: 12px;
   font-weight: 500;

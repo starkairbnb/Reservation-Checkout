@@ -10,6 +10,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .payment-details-container {
@@ -35,14 +36,14 @@
 }
 
 .question {
-  position: relative;
+  position: static;
   outline: none;
   padding: 0;
   margin: 0;
   border: transparent;
   width: 15px;
   height: 15px;
-  z-index: 0;
+  z-index: -0;
 }
 .question:focus > .icon {
   fill: rgb(216, 216, 216);
@@ -143,22 +144,22 @@
 }
 
 .cleaning-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 175%;
+  right: -53.3%;
 }
 
 .service-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 175%;
+  right: -58.2%;
 }
 
 .tax-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 175%;
+  right: -28.2%;
 }
 .due-tip {
-  bottom: 245%;
-  right: -355%;
+  bottom: 175%;
+  right: -82.2%;
 }
 
 .x-button {
@@ -178,5 +179,5 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:focus .tooltiptext {
   visibility: visible;
-  z-index: 5001;
+  z-index: 5005;
 }

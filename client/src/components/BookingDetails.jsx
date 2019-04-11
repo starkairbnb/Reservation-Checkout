@@ -1,6 +1,7 @@
 import React from 'react';
 import Summary from './Summary.jsx';
 import SpecialBox from './SpecialBox.jsx';
+import GuestDropdown from './GuestDropdown.jsx';
 
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
@@ -16,6 +17,50 @@ class BookingDetails extends React.Component {
   }
 
   render() {
+    let starz = (
+      <div className="stars">
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        <img
+          src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+          alt=""
+          height="12px"
+          width="12px"
+        />
+        {this.props.avgRating === 4.5 && (
+          <img
+            src="https://s3-us-west-1.amazonaws.com/sharebnbicons/half+star+icon.png"
+            alt=""
+            height="11.5px"
+            width="11.5px"
+          />
+        )}
+        {this.props.avgRating === 5 && (
+          <img
+            src="https://s3-us-west-1.amazonaws.com/sharebnbicons/star+icon2.png"
+            alt=""
+            height="12px"
+            width="12px"
+          />
+        )}
+      </div>
+    );
     let reportIcon = (
       <svg
         viewBox="0 0 24 24"
@@ -40,8 +85,15 @@ class BookingDetails extends React.Component {
               <span className="per-night">per night</span>
             </div>
             {this.props.reviewsCount > 0 && (
-              <button className="ratings">
-                <span className="stars">5starz </span>
+              <button
+                className="ratings"
+                onClick={() => {
+                  document.getElementById('reviews').scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }}
+              >
+                {starz}
                 <span className="ratings-count">{this.props.reviewsCount}</span>
               </button>
             )}
@@ -81,17 +133,22 @@ class BookingDetails extends React.Component {
           </div>
           <div className="guest-picker-container">
             <div className="guests-header">Guests</div>
-            <div>Guest picker react component</div>
+            <GuestDropdown maxGuests={this.props.maxGuests} />
           </div>
-          {this.props.startDate && this.props.endDate && (
-            <Summary
-              nightlyRate={this.props.nightlyRate}
-              serviceFeeRate={this.props.serviceFeeRate}
-              cleaningFee={this.props.cleaningFee}
-              taxRate={this.props.taxRate}
-              numNights={this.props.endDate.diff(this.props.startDate, 'days')}
-            />
-          )}
+          <div className="summary-cont">
+            {this.props.startDate && this.props.endDate && (
+              <Summary
+                nightlyRate={this.props.nightlyRate}
+                serviceFeeRate={this.props.serviceFeeRate}
+                cleaningFee={this.props.cleaningFee}
+                taxRate={this.props.taxRate}
+                numNights={this.props.endDate.diff(
+                  this.props.startDate,
+                  'days'
+                )}
+              />
+            )}
+          </div>
 
           <div className="button-container">
             <button className="book-button">Book</button>

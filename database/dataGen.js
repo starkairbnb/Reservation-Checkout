@@ -14,7 +14,7 @@ const listingGen = id => {
   listing.owner = faker.name.firstName();
   listing.maxGuests = getRandomIntInclusive(1, 10);
   listing.nightlyRate = listing.maxGuests * (getRandomIntInclusive(0, 20) + 25);
-  listing.avgRating = getRandomIntInclusive(0, 2) / 2 + 4;
+  listing.avgRating = getRandomIntInclusive(0, 1) / 2 + 4.5;
   listing.minStay = getRandomIntInclusive(1, 4);
   listing.serviceFeeRate = getRandomIntInclusive(10, 15) / 100;
   listing.recentViews = getRandomIntInclusive(0, 600);
