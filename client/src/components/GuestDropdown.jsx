@@ -13,6 +13,11 @@ class GuestDropdown extends React.Component {
       Infants: 0,
       open: false
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(type, dif) {
+    this.setState({ [type]: this.state[type] + dif });
   }
 
   render() {
@@ -58,18 +63,25 @@ class GuestDropdown extends React.Component {
                   guestsType="Adults"
                   currentGuests={this.state.Adults + this.state.Children}
                   typeCount={this.state.Adults}
-                  //maxOfType
-                  //minOfType
+                  maxOfType={this.props.maxGuests - this.state.Children}
+                  minOfType={1}
+                  handleChange={this.handleChange}
                 />
                 <Guests
                   guestsType="Children"
                   description="Ages 2-12"
                   typeCount={this.state.Children}
+                  maxOfType={this.props.maxGuests - this.state.Adults}
+                  minOfType={0}
+                  handleChange={this.handleChange}
                 />
                 <Guests
                   guestsType="Infants"
                   description="Under 2"
                   typeCount={this.state.Infants}
+                  maxOfType={5}
+                  minOfType={0}
+                  handleChange={this.handleChange}
                 />
               </div>
               <div className="max-guests">

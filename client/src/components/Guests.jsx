@@ -31,20 +31,33 @@ class Guests extends React.Component {
         </svg>
       </div>
     );
-    this.button = (
-      <div className="guest-button-container">
-        <button className="subtract-button">{this.subtract}</button>
-        <div className="typeCount">{this.props.typeCount}</div>
-        <button className="add-button">{this.add}</button>
-      </div>
-    );
   }
 
   render() {
+    console.log(this.props);
+    let button = (
+      <div className="guest-button-container">
+        <button
+          className={'subtract-button'}
+          onClick={() => this.props.handleChange(this.props.guestsType, -1)}
+          disabled={this.props.typeCount === this.props.minOfType}
+        >
+          {this.subtract}
+        </button>
+        <div className="typeCount">{this.props.typeCount}</div>
+        <button
+          className="add-button"
+          onClick={() => this.props.handleChange(this.props.guestsType, 1)}
+          disabled={this.props.typeCount === this.props.maxOfType}
+        >
+          {this.add}
+        </button>
+      </div>
+    );
     return (
       <div className="single-guest">
         {this.text}
-        {this.button}
+        {button}
       </div>
     );
   }

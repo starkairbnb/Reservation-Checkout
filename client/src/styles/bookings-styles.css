@@ -206,6 +206,16 @@
   border-color: #008489;
 }
 
+.subtract-button:disabled,
+.add-button:disabled {
+  border-color: rgba(0, 132, 137, 0.3);
+}
+
+.subtract-button:disabled svg,
+.add-button:disabled svg {
+  fill: rgba(0, 132, 137, 0.3);
+}
+
 .typeCount {
   width: 15px;
   height: 15px;
