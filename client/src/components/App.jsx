@@ -9,7 +9,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      scrollHeight: 0
+    };
     this.handleDatesChange = this.handleDatesChange.bind(this);
     this.clearDates = this.clearDates.bind(this);
   }
@@ -54,6 +56,13 @@ class App extends React.Component {
           });
         }
       )
+      .then(() => {
+        window.addEventListener('scroll', () => {
+          this.setState({ scrollHeight: window.scrollY }, () =>
+            console.log(this.state.scrollHeight)
+          );
+        });
+      })
       .catch(err => console.log(err));
   }
 
