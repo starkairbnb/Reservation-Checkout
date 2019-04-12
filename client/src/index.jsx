@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
-// ReactDOM.render(<App />, document.getElementById('reservation'));
+ReactDOM.render(<App />, document.getElementById('reservation'));
 
-window.Reservation = App;
+// window.Reservation = App;

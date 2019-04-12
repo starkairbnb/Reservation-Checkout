@@ -1,16 +1,17 @@
-.flex-container {
-  display: flex;
-  flex-direction: row;
+.main-body-reservations {
+  width: 618px;
 }
 
-.flex-container *,
-.flex-container *:before,
-.flex-container *:after {
+.main-body-reservations *,
+.main-body-reservations *:before,
+.main-body-reservations *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.left-col {
-  margin-right: 60px;
+.booking-details-container {
+  position: absolute;
+  right: 600px;
+  top: 0px;
 }

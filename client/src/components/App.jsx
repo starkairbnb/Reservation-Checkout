@@ -67,10 +67,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="main-body">
-        <div className="flex-container">
+      <div className="main-body-reservations">
+        <div className="reservation-container">
           <div className="left-col">
-            <div id="description" />
             <Availability
               handleDatesChange={this.handleDatesChange}
               startDate={this.state.startDate}
@@ -79,28 +78,26 @@ class App extends React.Component {
               minStay={this.state.minStay}
               daysSinceUpdated={this.state.daysSinceUpdated}
             />
-            <div id="reviews" />
-            <div id="hosted" />
-            <div id="location" />
-            <div id="policy" />
           </div>
-          <BookingDetails
-            handleDatesChange={this.handleDatesChange}
-            startDate={this.state.startDate}
-            endDate={this.state.endDate}
-            avgRating={this.state.avgRating}
-            cleaningFee={this.state.cleaningFee}
-            maxGuests={this.state.maxGuests}
-            minStay={this.state.minStay}
-            nightlyRate={this.state.nightlyRate}
-            owner={this.state.owner}
-            popular={this.state.popular}
-            recentViews={this.state.recentViews}
-            reviewsCount={this.state.reviewsCount}
-            serviceFeeRate={this.state.serviceFeeRate}
-            taxRate={this.state.taxRate}
-            clearDates={this.clearDates}
-          />
+          <div className="booking-details-container">
+            <BookingDetails
+              handleDatesChange={this.handleDatesChange}
+              startDate={this.state.startDate}
+              endDate={this.state.endDate}
+              avgRating={this.state.avgRating}
+              cleaningFee={this.state.cleaningFee}
+              maxGuests={this.state.maxGuests}
+              minStay={this.state.minStay}
+              nightlyRate={this.state.nightlyRate}
+              owner={this.state.owner}
+              popular={this.state.popular}
+              recentViews={this.state.recentViews}
+              reviewsCount={this.state.reviewsCount}
+              serviceFeeRate={this.state.serviceFeeRate}
+              taxRate={this.state.taxRate}
+              clearDates={this.clearDates}
+            />
+          </div>
         </div>
       </div>
     );

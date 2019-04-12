@@ -3,6 +3,13 @@
   right: 10px;
 }
 
+.availability-container .DayPicker_weekHeader_li {
+}
+
+.availability-container .CalendarMonthGrid {
+  left: 0;
+}
+
 .availability-container .CalendarMonth_table {
   border-collapse: separate;
   border-spacing: 1px;
