@@ -47,8 +47,9 @@ class BookingDetails extends React.Component {
           <img
             src="https://s3-us-west-1.amazonaws.com/sharebnbicons/half+star+icon.png"
             alt=""
-            height="11.5px"
-            width="11.5px"
+            height="11px"
+            width="12px"
+            margin-top=".5px"
           />
         )}
         {this.props.avgRating === 5 && (
