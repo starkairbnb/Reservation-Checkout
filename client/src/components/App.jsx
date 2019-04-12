@@ -88,7 +88,13 @@ class App extends React.Component {
               daysSinceUpdated={this.state.daysSinceUpdated}
             />
           </div>
-          <div className="booking-details-container">
+          <div
+            className={
+              this.state.scrollHeight >= 330
+                ? 'booking-details-container booking-details-container-sticky'
+                : 'booking-details-container'
+            }
+          >
             <BookingDetails
               handleDatesChange={this.handleDatesChange}
               startDate={this.state.startDate}
