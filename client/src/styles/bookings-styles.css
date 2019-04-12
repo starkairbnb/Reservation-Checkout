@@ -1,8 +1,5 @@
 .bookings-container {
   height: min-content;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 40px;
   width: 374px;
   z-index: 5000;
 }
