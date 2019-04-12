@@ -49,6 +49,7 @@ class BookingDetails extends React.Component {
             alt=""
             height="11px"
             width="12px"
+            style={{ marginTop: '.5px' }}
             margin-top=".5px"
           />
         )}
