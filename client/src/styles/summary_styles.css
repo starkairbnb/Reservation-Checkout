@@ -94,7 +94,7 @@
   margin-bottom: 10px;
 }
 
-.tooltip .tooltiptext {
+..tooltip-summary .tooltiptext {
   visibility: hidden;
   width: 304px;
   background-color: white;
@@ -115,7 +115,7 @@
   z-index: 5001;
 }
 
-.tooltip .tooltiptext::after {
+..tooltip-summary .tooltiptext::after {
   content: ' ';
   border-style: solid;
   border-width: 1px;
@@ -128,7 +128,7 @@
   border-color: white transparent transparent transparent;
   z-index: 2;
 }
-.tooltip .tooltiptext::before {
+..tooltip-summary .tooltiptext::before {
   content: ' ';
   border-style: solid;
   border-width: 1px;
@@ -177,7 +177,7 @@
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:focus .tooltiptext {
+.tooltip-summary:focus .tooltiptext {
   visibility: visible;
   z-index: 5005;
 }

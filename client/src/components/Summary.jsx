@@ -84,7 +84,7 @@ class Summary extends React.Component {
             <div className="cleaning-row">
               <div className="cleaning-left">
                 <div className="title">Cleaning fee </div>
-                <button className="question tooltip">
+                <button className="question tooltip-summary">
                   {icon}
                   <span className="tooltiptext cleaning-tip">
                     One-time fee charged by host to cover the cost of cleaning
@@ -105,7 +105,7 @@ class Summary extends React.Component {
             <div className="service-row">
               <div className="service-left">
                 <div className="title">Service fee</div>
-                <button className="question tooltip">
+                <button className="question tooltip-summary">
                   {icon}
                   <span className="tooltiptext service-tip">
                     This helps us run our platform and offer services like 24/7
@@ -126,7 +126,7 @@ class Summary extends React.Component {
             <div className="tax-row">
               <div className="tax-left">
                 <div className="title">Occupancy taxes and fees</div>
-                <button className="question tooltip">
+                <button className="question tooltip-summary">
                   {icon}
                   <span className="tooltiptext tax-tip">
                     This is a municipal accomodations tax necessary for
@@ -160,7 +160,7 @@ class Summary extends React.Component {
         <div className="due-later-container">
           <div className="due-later-left">
             <div className="due-later-text">Due on</div>
-            <button className="question tooltip">
+            <button className="question tooltip-summary">
               {icon}
               <span className="tooltiptext due-tip">
                 If you prefer to pay the full reservation amount now, you can
