@@ -90,7 +90,7 @@ class GuestDropdown extends React.Component {
                 } guests maximum. Infants don’t count toward the number of guests.`}
               </div>
               <div
-                className="close"
+                className="close-guests-button"
                 onClick={() => this.setState({ open: false })}
               >
                 Close
