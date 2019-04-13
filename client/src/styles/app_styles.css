@@ -10,6 +10,14 @@
   box-sizing: border-box;
 }
 
+#bookings-master-container *,
+#bookings-master-container *:before,
+#bookings-master-container *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .booking-details-container {
   position: absolute;
   right: 600px;

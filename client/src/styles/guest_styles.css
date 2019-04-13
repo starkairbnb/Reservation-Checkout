@@ -78,7 +78,7 @@
   margin-top: 10px;
 }
 
-.close:hover {
+.close-guests-button:hover {
   cursor: pointer;
   text-decoration-line: underline;
 }
