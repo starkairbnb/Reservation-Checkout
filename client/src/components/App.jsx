@@ -110,13 +110,6 @@ class App extends React.Component {
               daysSinceUpdated={this.state.daysSinceUpdated}
             />
           </div>
-          <div
-            className={
-              this.state.scrollHeight >= 330
-                ? 'booking-details-container booking-details-container-sticky'
-                : 'booking-details-container'
-            }
-          />
         </div>
       </div>
     );
