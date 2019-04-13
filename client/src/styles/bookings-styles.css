@@ -4,6 +4,12 @@
   z-index: 5000;
 }
 
+.booking-details-container-sticky {
+  position: fixed !important;
+  left: 958px !important;
+  top: 70px !important;
+}
+
 .guest-picker-container {
   z-index: 500;
 }
