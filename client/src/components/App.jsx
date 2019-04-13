@@ -58,9 +58,7 @@ class App extends React.Component {
       )
       .then(() => {
         window.addEventListener('scroll', () => {
-          this.setState({ scrollHeight: window.scrollY }, () =>
-            console.log(this.state.scrollHeight)
-          );
+          this.setState({ scrollHeight: window.scrollY });
         });
       })
       .catch(err => console.log(err));
