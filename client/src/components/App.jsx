@@ -90,7 +90,7 @@ class App extends React.Component {
           </div>
           <div
             className={
-              this.state.scrollHeight >= 310
+              this.state.scrollHeight >= 330
                 ? 'booking-details-container booking-details-container-sticky'
                 : 'booking-details-container'
             }
