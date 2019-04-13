@@ -94,7 +94,7 @@
   margin-bottom: 10px;
 }
 
-..tooltip-summary .tooltiptext {
+.tooltip-summary .tooltiptext {
   visibility: hidden;
   width: 304px;
   background-color: white;
@@ -115,7 +115,7 @@
   z-index: 5001;
 }
 
-..tooltip-summary .tooltiptext::after {
+.tooltip-summary .tooltiptext::after {
   content: ' ';
   border-style: solid;
   border-width: 1px;
@@ -128,7 +128,7 @@
   border-color: white transparent transparent transparent;
   z-index: 2;
 }
-..tooltip-summary .tooltiptext::before {
+.tooltip-summary .tooltiptext::before {
   content: ' ';
   border-style: solid;
   border-width: 1px;
