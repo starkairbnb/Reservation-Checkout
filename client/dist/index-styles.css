@@ -1,0 +1,13 @@
+#main-flexbox {
+  display: flex;
+  height: 200vh;
+  flex-direction: row;
+  width: min-content;
+  margin: auto;
+}
+
+#bookings-master-container {
+  position: sticky;
+  top: 90px;
+  margin-left: 40px;
+}

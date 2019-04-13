@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Availability from './Availability';
 import BookingDetails from './BookingDetails';
 import Axios from 'axios';
@@ -56,12 +57,35 @@ class App extends React.Component {
           });
         }
       )
-      .then(() => {
-        window.addEventListener('scroll', () => {
-          this.setState({ scrollHeight: window.scrollY });
-        });
-      })
+      // .then(() => {
+      //   window.addEventListener('scroll', () => {
+      //     this.setState({ scrollHeight: window.scrollY });
+      //   });
+      // })
       .catch(err => console.log(err));
+  }
+
+  componentDidUpdate() {
+    ReactDOM.render(
+      <BookingDetails
+        handleDatesChange={this.handleDatesChange}
+        startDate={this.state.startDate}
+        endDate={this.state.endDate}
+        avgRating={this.state.avgRating}
+        cleaningFee={this.state.cleaningFee}
+        maxGuests={this.state.maxGuests}
+        minStay={this.state.minStay}
+        nightlyRate={this.state.nightlyRate}
+        owner={this.state.owner}
+        popular={this.state.popular}
+        recentViews={this.state.recentViews}
+        reviewsCount={this.state.reviewsCount}
+        serviceFeeRate={this.state.serviceFeeRate}
+        taxRate={this.state.taxRate}
+        clearDates={this.clearDates}
+      />,
+      document.getElementById('bookings-master-container')
+    );
   }
 
   handleDatesChange({ startDate, endDate }) {
@@ -92,25 +116,7 @@ class App extends React.Component {
                 ? 'booking-details-container booking-details-container-sticky'
                 : 'booking-details-container'
             }
-          >
-            <BookingDetails
-              handleDatesChange={this.handleDatesChange}
-              startDate={this.state.startDate}
-              endDate={this.state.endDate}
-              avgRating={this.state.avgRating}
-              cleaningFee={this.state.cleaningFee}
-              maxGuests={this.state.maxGuests}
-              minStay={this.state.minStay}
-              nightlyRate={this.state.nightlyRate}
-              owner={this.state.owner}
-              popular={this.state.popular}
-              recentViews={this.state.recentViews}
-              reviewsCount={this.state.reviewsCount}
-              serviceFeeRate={this.state.serviceFeeRate}
-              taxRate={this.state.taxRate}
-              clearDates={this.clearDates}
-            />
-          </div>
+          />
         </div>
       </div>
     );
