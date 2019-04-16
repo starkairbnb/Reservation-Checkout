@@ -49,7 +49,9 @@ class GuestDropdown extends React.Component {
             <div className="guests-button-flex">
               <div className="guests-button-text">
                 {this.state.Adults + this.state.Children} Guests
-                {this.state.Infants > 0
+                {this.state.Infants === 1
+                  ? `, 1 infant`
+                  : this.state.Infants > 1
                   ? `, ${this.state.Infants} infants`
                   : ''}
               </div>
