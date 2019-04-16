@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/reservation', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/reservation', {
+  useNewUrlParser: true
+});
 
 const Schema = mongoose.Schema;
 
