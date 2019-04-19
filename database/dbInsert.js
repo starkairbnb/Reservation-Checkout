@@ -13,8 +13,8 @@ const getRandomIntInclusive = (min, max) => {
 };
 
 for (var i = 1; i <= 10; i++){
-  writeVideoInfoData(start, stop);
-  function writeVideoInfoData(start, stop){
+  writeInfoData(start, stop);
+  function writeInfoData(start, stop){
     var header = 'propertyId|owner|maxGuests|nightlyRate|avgRating|minStay|serviceFeeRate|recentViews|reviewsCount|reviewsCount|daysSinceUpdated|popular|cleaningFee|taxRate|\n';
     var data = header;
     for (var j = start; j <= stop; j++){
