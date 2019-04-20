@@ -7,7 +7,7 @@ const getRandomIntInclusive = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
 };
 
-const listingGen = id => {
+module.exports = listingGen = id => {
   let listing = {};
 
   listing.propertyId = id;
@@ -48,4 +48,4 @@ for (let i = 1; i <= 100; i -= -1) {
   data.push(listingGen(i));
 }
 
-module.exports = data;
+// module.exports = data;
