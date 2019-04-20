@@ -1,3 +1,4 @@
+//This file creates 10mil sets of fake data and the commands at the end of the page use mongoimport to write to mongodb
 const data = require('./dataGen.js');
 var faker = require("faker");
 var fs = require('fs');
