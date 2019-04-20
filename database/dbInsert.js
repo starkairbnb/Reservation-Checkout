@@ -15,10 +15,10 @@ const getRandomIntInclusive = (min, max) => {
 for (var i = 1; i <= 10; i++){
   writeInfoData(start, stop);
   function writeInfoData(start, stop){
-    var header = 'propertyId|owner|maxGuests|nightlyRate|avgRating|minStay|serviceFeeRate|recentViews|reviewsCount|reviewsCount|daysSinceUpdated|popular|cleaningFee|taxRate|\n';
+    var header = 'propertyId,owner,maxGuests,nightlyRate,avgRating,minStay,serviceFeeRate,recentViews,reviewsCount,daysSinceUpdated,popular,cleaningFee,taxRate\n';
     var data = header;
     for (var j = start; j <= stop; j++){
-      if (j % 100000 === 0) { console.log('j: ', j) }
+      if (j % 1000000 === 0) { console.log('j: ', j) }
       var propertyId = j;
       var owner = faker.name.firstName();
       var maxGuests = getRandomIntInclusive(1, 10);
@@ -49,7 +49,7 @@ for (var i = 1; i <= 10; i++){
         var taxRate = null;
       }
 
-      var csvString = `${propertyId}|${owner}|${maxGuests}|${nightlyRate}|${avgRating}|${minStay}|${serviceFeeRate}|${recentViews}|${reviewsCount}|${reviewsCount}|${daysSinceUpdated}|${popular}|${cleaningFee}|${taxRate}|\n`;
+      var csvString = `${propertyId},${owner},${maxGuests},${nightlyRate},${avgRating},${minStay},${serviceFeeRate},${recentViews},${reviewsCount},${daysSinceUpdated},${popular},${cleaningFee},${taxRate}\n`;
       data += csvString;
     }
     console.log(`now writing file ${i}`)
@@ -60,3 +60,9 @@ for (var i = 1; i <= 10; i++){
   start += ten_million;
   stop += ten_million;
 };
+
+//have to run for each .csv file
+// mongoimport --db reservation --collection listings --type csv --headerline --file /Users/uttej/hackreactor/Reservation-Checkout/database/data1.csv
+
+//can run once for all .csv files
+// for i in `ls /Users/uttej/hackreactor/Reservation-Checkout/database/*.csv $1`;  do mongoimport -d reservation -c listings $i --type=csv --headerline  ;  done
