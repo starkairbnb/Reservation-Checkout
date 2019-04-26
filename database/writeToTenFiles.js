@@ -1,5 +1,5 @@
 //This file creates 10mil sets of fake data and the commands at the end of the page use mongoimport to write to mongodb
-const data = require('../dataGen.js');
+const data = require('./dataGen.js');
 var faker = require("faker");
 var fs = require('fs');
 
@@ -21,6 +21,7 @@ for (var i = 1; i <= 10; i++){
     for (var j = start; j <= stop; j++){
       if (j % 1000000 === 0) { console.log('j: ', j) }
       var propertyId = j;
+      var primaryId = getRandomIntInclusive(10000000, 20000000);
       var owner = faker.name.firstName();
       var maxGuests = getRandomIntInclusive(1, 10);
       var nightlyRate = maxGuests * (getRandomIntInclusive(0, 20) + 25);

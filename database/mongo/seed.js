@@ -1,6 +1,6 @@
 const db = require('./index.js');
 const mongoose = require('mongoose');
-const data = require('./dataGen.js');
+const data = require('../dataGen.js');
 
 const seed = dataArr => {
   db.insertMany(dataArr)

@@ -1,6 +1,6 @@
 var fs = require('fs');
 var ws = fs.createWriteStream(__dirname + "/reservation.csv");
-var listingGen = require('..dataGen.js');
+var listingGen = require('./dataGen.js');
 
 function writeTenMillionTimes(writer, callback) {
   let i = 1e7;

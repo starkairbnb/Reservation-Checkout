@@ -31,13 +31,13 @@ module.exports = listingGen = id => {
     let cleaningVar = listing.maxGuests * getRandomIntInclusive(10, 20);
     listing.cleaningFee = cleaningVar;
   } else {
-    listing.cleaningFee = null;
+    listing.cleaningFee = 0;
   }
 
   if (Math.random() >= 0.5) {
     listing.taxRate = getRandomIntInclusive(5, 10) / 100;
   } else {
-    listing.taxRate = null;
+    listing.taxRate = 0;
   }
 
   return listing;

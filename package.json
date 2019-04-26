@@ -4,9 +4,12 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "node server/index.js",
     "build": "webpack -w",
-    "seed": "node database/seed.js"
+    "seed": "node database/seed.js",
+    "createFile": "node database/mongo/writeToOneFile.js",
+    "mongoInsert": "mongoimport --db reservation --collection listings --type csv --headerline --file /Users/uttej/hackreactor/Reservation-Checkout/database/mongo/reservation.csv",
+    "postgresInsert": "node database/postgres/index.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +46,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
     "peer": "^0.2.10",
+    "pg": "^7.10.0",
     "react": "^16.8.6",
     "react-calendar": "^2.18.1",
     "react-dates": "^20.1.0",
