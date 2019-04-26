@@ -9,7 +9,8 @@
     "seed": "node database/seed.js",
     "createFile": "node database/mongo/writeToOneFile.js",
     "mongoInsert": "mongoimport --db reservation --collection listings --type csv --headerline --file /Users/uttej/hackreactor/Reservation-Checkout/database/mongo/reservation.csv",
-    "postgresInsert": "node database/postgres/index.js"
+    "postgresInsert": "node database/postgres/index.js",
+    "artillery": "artillery run artillery/artillery.yml"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
+    "artillery": "^1.6.0-27",
     "babel-loader": "^8.0.5",
     "css-modules": "^0.3.0",
     "faker": "^4.1.0",
