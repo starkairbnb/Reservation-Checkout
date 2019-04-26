@@ -2,3 +2,4 @@ node_modules
 package-lock.json
 bundle.js
 reservation.csv
+.DS_Store
