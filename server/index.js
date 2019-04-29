@@ -4,7 +4,8 @@ const morgan = require('morgan');
 const path = require('path');
 const router = require('./router.js');
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 3003;
+
 
 app.use(bodyParser.json());
 app.use(morgan('dev'));
