@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost:27017/reservation', {
 const Schema = mongoose.Schema;
 
 const listingSchema = new Schema({
-  propertyId: { type: Number, index: true },
+  propertyId: { type: Number, unique: true, index: true },
   owner: { type: String },
   maxGuests: { type: Number },
   nightlyRate: { type: Number },
