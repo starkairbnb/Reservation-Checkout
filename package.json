@@ -9,7 +9,7 @@
     "seed": "node database/seed.js",
     "createFile": "node database/writeToOneFile.js",
     "mongoInsert": "mongoimport --db reservation --collection listings --type csv --headerline --file /Users/uttej/hackreactor/Reservation-Checkout/database/mongo/reservation.csv",
-    "remoteInsert": "mongoimport --db reservation --collection listings --type csv --headerline --file /Users/uttej/hackreactor/Reservation-Checkout/database/mongo/reservation.csv --username devadmin --password devadmin --host 52.53.247.73/",
+    "remoteInsert": "mongoimport --db reservation --collection listings --type csv --headerline --file /Users/uttej/hackreactor/Reservation-Checkout/database/mongo/reservation.csv --username devadmin --password devadmin --host 52.53.247.73",
     "postgresInsert": "node database/postgres/index.js",
     "artillery": "artillery run artillery/artillery.yml"
   },
