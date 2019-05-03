@@ -1,3 +1,7 @@
+**/node_modules
 node_modules
-reservation.csv
+*.csv
 .DS_Store
+*.log
+coverage/
+.vscode/
