@@ -8,7 +8,7 @@ const port = process.env.PORT || 3003;
 
 
 app.use(bodyParser.json());
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
